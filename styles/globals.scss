@@ -63,6 +63,10 @@ section {
 
 footer {
   padding: 20px;
+
+  h4 {
+    font-size: 1.25rem;
+  }
 }
 
 .selected-navlink {
@@ -1168,7 +1172,25 @@ footer {
     flex-direction: column;
     margin: 0 auto;
     margin-bottom: 50px;
+    position: relative;
 
+    @include breakpoint(laptop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .footer__left {
+      @include breakpoint(laptop) {
+        width: 40%;
+      }
+    }
+    .footer__right {
+      @include breakpoint(laptop) {
+        width: 40%;
+      }
+    }
+    // .footer__description {
+    // }
     h3 {
       font-size: 1.5rem;
       margin-bottom: 10px;
@@ -1215,6 +1237,23 @@ footer {
       justify-content: space-between;
       gap: 20px;
     }
+    .footer__bottom__right__corner__socials {
+      position: absolute;
+      gap: 20px;
+      display: flex;
+      bottom: -10px;
+
+      @include breakpoint(phablet) {
+        bottom: -30px;
+      }
+      @include breakpoint(laptop) {
+        bottom: -50px;
+        right: 0;
+      }
+      @include breakpoint(desktop) {
+        bottom: -60px;
+      }
+    }
     .footer__column {
       display: flex;
       flex-direction: column;
@@ -1224,10 +1263,12 @@ footer {
       .footer__email {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 10px;
       }
 
       .footer__icon {
         margin-right: 5px;
+        align-self: end;
       }
 
       a {
