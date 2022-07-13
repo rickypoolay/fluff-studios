@@ -27,6 +27,7 @@ export default function CaseStudyCard({ caseInfo }) {
         <div className="view-more">
           <p>View More</p>
           <IoIosArrowForward size={"20px"} />
+          <h1>hey</h1>
         </div>
       </div>
     </div>
